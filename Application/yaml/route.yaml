@@ -1,12 +1,12 @@
 kind: Route
 apiVersion: route.openshift.io/v1
 metadata:
-  name: {{ .Chart.Name }}-route
+  name: guygufada-hello-world
 spec:
   to:
     kind: Service
-    name: {{ .Chart.Name }}-service
+    name: guygufada-hello-world
     weight: 100
   port:
-    targetPort: {{ .Values.service.servicePort }}
+    targetPort: 8080
   wildcardPolicy: None
